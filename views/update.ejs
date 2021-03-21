@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Logo.png" type="image/ico" />
+    
+    <title>Netflix | Admin</title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+      }
+      img{
+        margin: 40px 0 5px;
+        height: 60px;
+      }
+      h3{
+        font-family: 'Noto Serif', serif;
+
+      }
+      .btn{
+        width: 160px;
+        color: black;
+      }
+      .add{
+        background: #e50914;
+        color: white;
+        border-radius: 5px;
+      }
+      .add:hover{
+        background: #97070e;
+      }
+      @media (max-width: 650px) {
+        .btn{
+          width: 120px;
+        }
+      }
+      @media (max-width: 425px) {
+        .btn{
+          width: 100px;
+          font-size: 14px;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center-align">
+        <img src="images/Logo-main.png" class="responsive-img" height="60" alt="">
+        
+      </div>
+      
+      <%= typeof msg != 'undefined' ? msg : '' %>
+      
+      <form action="/update" method="POST">
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Type</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input type="text" name="type1" class="file-path" value="<%= type %>" style="display:none;" />
+            <input type="text" name="type" class="file-path" value="<%= type %>" />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Name</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input
+            type="text"
+            name="name1"
+            class="file-path"
+            value="<%= name %>"
+            style="display: none;"
+          />
+            <input
+              type="text"
+              name="name"
+              class="file-path"
+              value="<%= name %>"
+            />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Year</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input
+              type="number"
+              name="year1"
+              class="file-path"
+              value="<%= year %>"
+              style="display: none;"
+            />
+            <input
+              type="number"
+              name="year"
+              class="file-path"
+              value="<%= year %>"
+            />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Length</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input
+              type="text"
+              name="duration1"
+              class="file-path"
+              value="<%= duration %>"
+              style="display: none;"
+            />
+            <input
+              type="text"
+              name="duration"
+              class="file-path"
+              value="<%= duration %>"
+            />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Director</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input
+              type="text"
+              name="director1"
+              class="file-path"
+              value="<%= director %>"
+              style="display: none;"
+            />
+            <input
+              type="text"
+              name="director"
+              class="file-path"
+              value="<%= director %>"
+            />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Age</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input type="number" name="age1" class="file-path" value="<%= age %>" style="display:none" />
+            <input type="number" name="age" class="file-path" value="<%= age %>" />
+          </div>
+        </div>
+        <!-- end  -->
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Sub Type</span>
+          </div>
+          <div class="file-path-wrapper">
+            <input
+              type="text"
+              name="subtype1"
+              class="file-path"
+              value="<%= subtype %>"
+              style="display: none;"
+            />
+            <input
+              type="text"
+              name="subtype"
+              class="file-path"
+              value="<%= subtype %>"
+            />
+          </div>
+        </div>
+        <!-- end  -->
+        <!-- <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Image</span>
+            <input name="myImage" type="file" />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" />
+          </div>
+        </div> -->
+        <!-- end  --><br>
+        <div class="center-align">
+          <button type="submit" class="btn add">Update</button>
+        </div><br>
+      </form>
+      <br />
+      
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

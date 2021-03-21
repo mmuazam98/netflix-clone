@@ -1,0 +1,129 @@
+<%- include ("partials/header") %>
+<section id="shows">
+  <div class="img-wrapper" style="overflow-x: hidden">
+    <img
+      class="img-fluid img-main overlay"
+      src="images/bg.jpg"
+      id="main-image"
+      style="min-width: 100vw; max-height: 100vh"
+    />
+    
+    <button class="btn playNow"><i class="fa fa-play" aria-hidden="true"></i> Play</button>
+    <button class="btn moreInfo"><i class="fas fa-info-circle" aria-hidden="true"></i> More Info</button>
+    <span class="tempAge"></span>
+  </div>
+
+  <!-- section 1 -->
+  <div class="comedies category">
+    <div class="owl-slider container">
+      <div class="text-left">
+        <h3 class="title">Comedies</h3>
+      </div>
+      <div id="carousel" class="owl-carousel">
+        <% result.forEach(element => { %> <%if(element.SubType=="comedy"){ %>
+        
+
+        <div class="item">
+          <img class="owl-lazy" data-src="uploads/<%= element.Image %> " alt="" />
+          <div class="details">
+            <span class="name"><%= element.Name %> </span
+            ><span class="age"><%= element.Age %>+</span><br />
+            <span class="director" title="Director"> <%= element.Director %></span>
+            <br />
+            <span class="time"><%= element.Length %></span>
+            <span class="dot"></span>
+            <span class="date"><%= element.Year %></span><span class="dot"></span>
+
+            <span class="subtype"><%= element.SubType %> </span>
+          </div>
+        </div>
+        <%} }) %>
+      </div>
+    </div>
+  </div>
+   <!-- end of section 1 -->
+    <!-- section 2 -->
+  <div class="action category">
+    <div class="owl-slider container">
+      <div class="text-left">
+        <h3 class="title">Action</h3>
+      </div>
+      <div id="carousel" class="owl-carousel">
+        <% result.forEach(element => { if(element.SubType =="action"){ %>
+        
+        <div class="item">
+          <img class="owl-lazy" data-src="uploads/<%= element.Image %> " alt="" />
+          <div class="details">
+            <span class="name"><%= element.Name %> </span
+            ><span class="age"><%= element.Age %>+</span><br />
+            <span class="director" title="Director"> <%= element.Director %></span>
+            <br />
+            <span class="time"><%= element.Length %></span>
+            <span class="dot"></span>
+            <span class="date"><%= element.Year %></span><span class="dot"></span>
+
+            <span class="subtype"><%= element.SubType %> </span>
+          </div>
+        </div>
+        <%} }) %>
+      </div>
+    </div>
+  </div>
+  <!-- end of section 2  -->
+  <!-- section 3 -->
+  <div class="romance category">
+    <div class="owl-slider container">
+      <div class="text-left">
+        <h3 class="title">Romance</h3>
+      </div>
+      <div id="carousel" class="owl-carousel">
+        <% result.forEach(element => { if(element.SubType == "romance"){ %>
+        <div class="item">
+          <img class="owl-lazy" data-src="uploads/<%= element.Image %> " alt="" />
+          <div class="details">
+            <span class="name"><%= element.Name %> </span
+            ><span class="age"><%= element.Age %>+</span><br />
+            <span class="director" title="Director"> <%= element.Director %></span>
+            <br />
+            <span class="time"><%= element.Length %></span>
+            <span class="dot"></span>
+            <span class="date"><%= element.Year %></span><span class="dot"></span>
+
+            <span class="subtype"><%= element.SubType %> </span>
+          </div>
+        </div>
+        <%} }) %>
+      </div>
+    </div>
+  </div>
+  <!-- end of section 3  -->
+   <!-- section 4 -->
+  <div class="romance category">
+    <div class="owl-slider container">
+      <div class="text-left">
+        <h3 class="title">Horror</h3>
+      </div>
+      <div id="carousel" class="owl-carousel">
+        <% result.forEach(element => { if(element.SubType == "horror"){ %>
+        <div class="item">
+          <img class="owl-lazy" data-src="uploads/<%= element.Image %> " alt="" />
+          <div class="details">
+            <span class="name"><%= element.Name %> </span
+            ><span class="age"><%= element.Age %>+</span><br />
+            <span class="director" title="Director"> <%= element.Director %></span>
+            <br />
+            <span class="time"><%= element.Length %></span>
+            <span class="dot"></span>
+            <span class="date"><%= element.Year %></span><span class="dot"></span>
+
+            <span class="subtype"><%= element.SubType %> </span>
+          </div>
+        </div>
+        <%} }) %>
+      </div>
+    </div>
+  </div>
+  <!-- end of section 4 -->
+</section>
+
+<%- include ("partials/footer") %>

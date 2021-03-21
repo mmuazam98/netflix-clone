@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="icon" href="images/Logo.png" type="image/ico" />
+    <link
+      rel="stylesheet"
+      href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css"
+    />
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/nav.css" />
+  </head>
+  <body>
+    <section id="index">
+      <div class="showcase">
+        <div class="showcase-top">
+          <img src="https://i.ibb.co/r5krrdz/logo.png" alt="logo" class="img-fluid" />
+          <a href="#" class="btn btn-rounded signIn">Sign In</a>
+        </div>
+        <div class="showcase-content">
+          <h1>See what's next</h1>
+          <p>Watch anywhere. Cancel Anytime</p>
+          <a href="#" class="btn btn-xl watch">Watch Free For 30 Days </a>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="login">
+          <h1 class="login__title">Sign In</h1>
+          <div class="errorEmail err">
+            Sorry, we can't find an account with this email address. Please try again or <a href="#" class="createNew">create a new account</a>.
+          </div>
+          <div class="errorPass err">
+            <strong>Incorrect password.</strong> Please try again or you can <a href="#" class="reset-pass">reset your password</a>.
+          </div>
+          <form class="loginForm">
+            <div class="login__group">
+              <input
+                class="login__group__input"
+                type="text"
+                id="email"
+                name="email"
+                required="true"
+              /><label class="login__group__label">Email or phone number</label>
+            </div><span id="valid">Enter a valid email address or phone number.</span>
+            <div class="login__group log">
+              <input
+                class="login__group__input"
+                type="password"
+                id="password"
+                name="password"
+                required="true"
+              /><label class="login__group__label">Password</label
+              ><span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span>
+            </div>
+            <span id="error"></span>
+            <div class="forgot">
+              <input type="checkbox" id="remember" name="Remember" value="remember" />
+              <label for="remember">Remember Me</label>
+              <span class="forgotPass">Forgot Password?</span>
+            </div>
+  
+            <!-- <input type="submit" class="login__sign-in" value="Sign In" /> -->
+            <button type="submit" class="login__sign-in">
+              <span id="signInText">Sign In</span>
+              <span class="spinner-border spinner-border-sm text-light" id="signInSpinner" role="status">
+                <span class="sr-only">Loading...</span>
+              </span>
+            </button>
+          </form>
+          <div class="login_bottom">
+            <a class="login_bottom_text" href="#">Need help?</a>
+          </div>
+          <div class="facebook">
+            <a class="fb-login">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              Login with Facebook
+            </a>
+          </div>
+          <div class="signup">
+            <p>New to Netflix? <a href="#" id="showSignUp">Sign up now.</a></p>
+          </div>
+          <div class="terms">
+            <p>
+              This page is protected by Google reCAPTCHA to ensure you're not a bot.
+              <a href="#">Learn more.</a>
+            </p>
+          </div>
+        </div>
+        <!-- end of login  -->
+  
+        <!-- sign up  -->
+        <div class="signup-form">
+          <h1 class="login__title">Sign Up</h1>
+          <div class="errEmail err">
+            This email has already been registered. Please enter a new email address.
+          </div>
+          <form class="signupForm">
+            <div class="login__group">
+              <input
+                class="login__group__input"
+                type="text"
+                id="name"
+                name="name"
+                required="true"
+              /><label class="login__group__label">Name</label>
+            </div>
+            <div class="login__group">
+              <input
+                class="login__group__input"
+                type="text"
+                id="newEmail"
+                name="email"
+                required="true"
+              /><label class="login__group__label">Email or phone number</label>
+            </div><span id="valid">Enter a valid email address or phone number.</span>
+            <div class="login__group sign">
+              <input
+                class="login__group__input"
+                type="password"
+                id="newPassword"
+                name="password"
+                required="true"
+              />
+              <label class="login__group__label">Password</label>
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span>
+            </div>
+            <span id="error"></span>
+  
+            <!-- <input class="login__sign-up" type="submit" value="Sign Up" /> -->
+            <button type="submit" class="login__sign-up">
+              <span id="signUpText">Sign Up</span>
+              <span class="spinner-border spinner-border-sm text-light" id="signUpSpinner" role="status">
+                <span class="sr-only">Loading...</span>
+              </span>
+            </button>
+          </form>
+          <div class="login_bottom">
+            <a class="login_bottom_text" href="#">Need help?</a>
+          </div>
+          <div class="signup">
+            <p>Have an account? <a href="#" id="showSignIn">Sign In.</a></p>
+          </div>
+          <div class="terms">
+            <p>
+              This page is protected by Google reCAPTCHA to ensure you're not a bot.
+              <a href="#">Learn more.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </section>
+    
+    <%- include ("partials/footer") %>
+  </body>
+</html>

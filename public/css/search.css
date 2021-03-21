@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+section#search,
+section#movie,
+section#nomatch {
+  min-height: 100vh;
+}
+#search .container,
+#movie .container {
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#nomatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.searchRes {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  color: rgb(248, 248, 248);
+  transform: translate(-5%, -15%);
+}
+.searchRes h3 {
+  width: 100%;
+}
+#movie .container {
+  max-width: 20%;
+}
+@media (max-width: 1300px) {
+  #movie .container {
+    max-width: 30%;
+  }
+}
+@media (max-width: 1100px) {
+  #movie .container {
+    max-width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  #movie .container {
+    max-width: 45%;
+  }
+}
+@media (max-width: 650px) {
+  #movie .container {
+    max-width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  #movie .container {
+    max-width: 65%;
+  }
+  #search .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 380px) {
+  #search .container {
+    max-width: 75%;
+  }
+}
+#search .title {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+#search .category {
+  margin: 20px 0;
+}

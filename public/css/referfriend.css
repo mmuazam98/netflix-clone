@@ -1,0 +1,106 @@
+#refer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+#refer .box {
+  background-color: rgb(233, 233, 233);
+  min-height: 200px;
+  padding: 15px 30px;
+  position: relative;
+  border-radius: 5px;
+}
+#refer .col-md-12 {
+  margin-top: 75px;
+}
+#refer input {
+  width: 75%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+#refer .btn-danger {
+  background: #e50914;
+}
+#refer h6.share {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-top: 30px;
+  transform: translateX(-50%);
+}
+#refer h5.or {
+  margin-top: 10px;
+}
+#refer .row i {
+  font-size: 30px;
+  margin: 9px 18px;
+  cursor: pointer;
+}
+#refer span.dot {
+  height: 20px;
+  width: 1px;
+  padding: 10px 0.1px;
+  /* border: 1px solid red; */
+  background-color: rgb(87, 87, 87);
+}
+
+#refer .fa-facebook-square {
+  color: #315197;
+}
+#refer .fa-twitter-square {
+  color: #018bc2;
+}
+#refer .fa-whatsapp-square {
+  color: #4fce5d;
+}
+#refer .fa-envelope-square {
+  color: #bb001b;
+}
+@media (max-width: 1200px) {
+  #refer input {
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  #refer .box {
+    padding: 25px 35px 35px;
+  }
+  #refer .col-md-12 {
+    margin-top: 10px;
+  }
+  #refer .link-input {
+    margin-top: 85px;
+  }
+  #refer h6.share {
+    width: 80%;
+  }
+}
+@media (max-width: 460px) {
+  h2.mb-3 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 410px) {
+  h2.mb-3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 380px) {
+  h2.mb-3 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 400px) {
+  #refer .box {
+    padding: 30px 20px 45px;
+  }
+  #refer .link-input {
+    margin-top: 100px;
+  }
+  #refer h6.share {
+    width: 85%;
+  }
+}

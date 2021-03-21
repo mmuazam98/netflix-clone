@@ -1,0 +1,118 @@
+<%- include ("partials/header") %> 
+
+<% if(result.length>1){%>
+<section id="search">
+    <div class="category">
+        <div class="owl-slider container">
+          <div class="text-left">
+            <h3 class="title">Search results for: <%= search %> </h3>
+          </div>
+          <div id="carousel" class="owl-carousel">
+            
+          <% result.forEach(element => {  %>
+            <div class="item">
+              <img class="owl-lazy" data-src="uploads/<%= element.Image %> " alt="" />
+              <div class="details">
+                <span class="name"><%= element.Name %> </span
+                ><span class="age"><%= element.Age %>+</span><br />
+                <span class="director" title="Director"> <%= element.Director %></span>
+                <br />
+                <span class="time"><%= element.Length %></span>
+                <span class="dot"></span>
+                <span class="date"><%= element.Year %></span><span class="dot"></span>
+    
+                <span class="subtype"><%= element.SubType %> </span>
+              </div>
+            </div>
+          <% })%>
+          </div>
+        </div>
+    </div>
+</section>
+<% } else if(result.length==1) {%> 
+  <div class="text-left searchRes">
+    <h3 class="title">Search results for: <%= search %> </h3>
+  </div>
+<section id="movie">
+  
+    <div class="owl-carousel owl-theme container" id="search-carousel">
+      
+        <div class="item">
+            <img src="uploads/<%= result[0].Image %>" alt="" style="border-radius: 10px;">
+            <div class="details">
+                <span class="name"><%= result[0].Name %> </span
+                ><span class="age"><%= result[0].Age %>+</span><br />
+                <span class="director" title="Director"> <%= result[0].Director %></span>
+                <br />
+                <span class="time"><%= result[0].Length %></span>
+                <span class="dot"></span>
+                <span class="date"><%= result[0].Year %></span><span class="dot"></span>
+    
+                <span class="subtype"><%= result[0].SubType %> </span>
+              </div>
+        </div>
+        
+    </div>
+</section>
+<% } else if(result.length==0) {%> 
+  <section id="nomatch">
+    <h2 class="error">No match found for: <%= search %>  </h2>
+  </section>
+<% } %> 
+
+
+<section id="footer">
+  <footer class="footer">
+    <p>
+      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+    </p>
+    <div class="footer-cols">
+      <ul>
+        <li><a href="#">Audio and Subtitles</a></li>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact Us</a></li>
+        
+      </ul>
+      <ul>
+        <li><a href="#">Audio Description</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Legal Notices</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Help Centre</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Corporate Information</a></li>
+      </ul>
+    </div>
+    <p>
+      <span id="service">Service Code</span>
+    </p>
+    <p id="copyright">
+      &copy 1997-2020 Netflix, Inc.
+    </p>
+  </footer>
+</section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <script src="/js/search.js"></script>
+  <script src="/js/nav.js"></script>
+</body>
+</html>

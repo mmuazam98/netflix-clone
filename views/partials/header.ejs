@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <!-- fontAwesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <!-- owl carousel  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>Netflix</title>
+    <link rel="icon" href="images/Logo.png" type="image/ico" />
+    <link
+      rel="stylesheet"
+      href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css"
+    />
+
+    <link rel="stylesheet" href="/css/nav.css" />
+  </head>
+  <body>
+    <section id="nav">
+      <nav class="navbar smart-scroll fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/home"
+          ><img src="images/Logo-main.png" class="img-fluid logo" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#main_nav"
+        >
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+          <ul class="navbar-nav mr-auto">
+            <img src="images/Logo-main.png" class="img-fluid logo" alt="" />
+            <li class="nav-item first" id="home">
+              <a class="nav-link" href="/home">Home </a>
+            </li>
+            <li class="nav-item" id="shows">
+              <a class="nav-link" href="/shows"> TV Shows </a>
+            </li>
+            <li class="nav-item" id="movies">
+              <a class="nav-link" href="/movies"> Movies </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"> New & Popular </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"> My List </a></li>
+            <li class="nav-item" id="search-sm">
+              <a class="btn text-white nav-link" id="search-bar-sm" href="#">
+                <form action="/search" method="POST">
+                  <input type="search" name="search" id="search" placeholder="Search title, genre, type...">
+                  <button type="submit" class="btn text-white" id="search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </a>
+            </li>
+          </ul>
+
+          <!-- <div class="right-icons"> -->
+          <span id="right">
+            <a class="btn text-white" id="search-bar" href="#">
+            <form action="/search" method="POST">
+              <input type="search" name="search" id="search" placeholder="Search title, genre, type...">
+              <button type="submit" class="btn text-white" id="search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+            </a>
+            <span class="search-icon">
+              <a href="#" class="btn text-white"><i class="fa fa-search" aria-hidden="true"></i></a>
+            </span>
+
+            <a class="btn text-white" href="/referfriend"><i class="fas fa-gift"></i></a>
+            <!-- <a class="btn text-white" href="#"
+              ><i class="fa fa-bell" aria-hidden="true"></i
+            ></a> -->
+
+            <span class="dropdown drop notifications">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa fa-bell" aria-hidden="true"></i>
+              </button>
+              <div
+                class="dropdown-menu notif"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item text-center" href="#"
+                  ><img
+                    src="images/1.jpg"
+                    width="70"
+                    height="50"
+                    class="mr-2"
+                  />
+                  <span>Continue watching The Walking Dead</span><br>
+                  
+                </a>
+              </div>
+            </span>
+
+
+            <span class="dropdown drop profile">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="images/avatar2.png" class="avatar" alt="" />
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item text-center" href="#"
+                  ><img
+                    src="images/avatar2.png"
+                    width="35"
+                    height="35"
+                    class="mr-2"
+                  />Ginnnoi</a
+                >
+                <a class="dropdown-item text-center" href="#"
+                  ><img
+                    src="images/avatar.png"
+                    width="35"
+                    height="35"
+                    class="mr-2"
+                  />Alpanna
+                </a>
+                <a class="dropdown-item text-center" href="#"
+                  ><img
+                    src="images/avatar3.png"
+                    width="35"
+                    height="35"
+                    class="mr-2"
+                  />Dranzer</a
+                >
+                <hr />
+                <a class="dropdown-item text-center" href="/profile">Manage Account</a>
+                <a class="dropdown-item text-center logout-btn" href="/logout">Sign Out</a>
+              </div>
+            </span>
+          </span>
+          <!-- </div> -->
+        </div>
+      </nav>
+    </section>
+    <% if(page=="home"){ %>
+    <script>
+      let element = document.getElementById("home");
+      element.classList.add("active");
+    </script>
+    <% }else if(page=="movies") {%>
+    <script>
+      let element = document.getElementById("movies");
+      element.classList.add("active");
+    </script>
+    <%}else if(page=="shows"){%>
+    <script>
+      let element = document.getElementById("shows");
+      element.classList.add("active");
+    </script>
+    <%}%>
+

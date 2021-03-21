@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+#home .container {
+  max-width: 90%;
+}
+#home .category {
+  margin: 20px 0;
+}
+#home .title {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+}
+#home .playNow,#home .moreInfo{
+  background: white !important;
+  padding: 7px 30px;
+  font-weight: 700;
+  font-size: 20px;
+}
+#home .playNow i,#home .moreInfo i{
+  padding-right: 9px;
+}
+#home .moreInfo{
+  background: rgba(65, 65, 65, 0.55) !important;
+  padding-right: 7px 20px;
+  color: white;
+}
+#home span.tempAge{
+  background-color: rgba(77, 77, 77, 0.6);
+
+  border-left: 3px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 5px 25px;
+}
+@media (max-width: 700px) {
+  #home .playNow,#home .moreInfo{
+    padding: 5px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  #home .container {
+    max-width: 80%;
+  }
+  #home .playNow,#home .moreInfo{
+    padding: 5px 13px;
+    font-size: 16px;
+  }
+  #home span.tempAge{
+    padding: 5px 18px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 380px) {
+  #home .container {
+    max-width: 75%;
+  }
+  #home .playNow,#home .moreInfo{
+    padding: 5px 11px;
+    font-size: 15px;
+  }
+}
+

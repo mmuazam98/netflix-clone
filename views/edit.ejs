@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <!-- fontAwesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>Netflix</title>
+    <link rel="icon" href="images/Logo.png" type="image/ico" />
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        thead{
+            background: rgb(36, 36, 36) !important;
+        }
+        .container{
+            max-width: 80%;
+        }
+        @media(max-width:700px){
+          .container{
+            max-width: 95%;
+          }
+        }
+    </style>
+   </head>
+<body>
+    <div class="container my-3">
+        <div class="text-center">
+            <img src="images/Logo-main.png" class="responsive-img" height="60" alt="">
+          </div>
+    </div>    
+      
+    <div class="container table-responsive">
+      <h4 class="text-center my-4"><%= typeof msg != 'undefined' ? msg : '' %></h4>
+        <table class="table table-borderless table-hover table-dark mb-5">
+            <thead>
+              <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Type</th>
+                <th scope="col">Name</th>
+                <th scope="col">Release Year</th>
+                <th scope="col">Length</th>
+                <th scope="col">Director</th>
+                <th scope="col">Age</th>
+                <th scope="col">SubType</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+            <% result.forEach(function (element, index) {  %>
+              <tr>
+                    <th scope="row"><%= index+1 %> </th>
+                    <td><%= element.Type %> </td>
+                    <td><%= element.Name %></td>
+                    <td><%= element.Year %></td>
+                    <td><%= element.Length %></td>
+                    <td><%= element.Director %></td>
+                    <td><%= element.Age %></td>
+                    <td><%= element.SubType %></td>
+                    <td>                      
+                        <form action="/deleteItem" method="POST">
+                            <input type="text" name="id" value="<%= element.Name %>" style="display: none;">
+                            <button class="btn text-white" type="submit">
+                                <i class="fa fa-trash" id="delete" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>                      
+                        <form action="/updateItem" method="POST">
+                            <input type="text" name="type" value="<%= element.Type %>" style="display: none;">
+                            <input type="text" name="name" value="<%= element.Name %>" style="display: none;">
+                            <input type="text" name="year" value="<%= element.Year %>" style="display: none;">
+                            <input type="text" name="duration" value="<%= element.Length %>" style="display: none;">
+                            <input type="text" name="director" value="<%= element.Director %>" style="display: none;">
+                            <input type="text" name="age" value="<%= element.Age %>" style="display: none;">
+                            <input type="text" name="subtype" value="<%= element.SubType %>" style="display: none;">
+                            <button class="btn text-white" type="submit">
+                                <i class="fa fa-edit" id="delete" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </td>
+                
+              </tr>
+            <% })%>
+              
+            </tbody>
+          </table>
+    </div>
+    
+</body>
+</html>

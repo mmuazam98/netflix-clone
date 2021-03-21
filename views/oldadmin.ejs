@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Panel</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="mainform">
+      <div id="signupbox" style="margin-top: 50px" class="mainbox">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title"><h2>Add a Movie/Show</h2></div>
+          </div>
+          <div class="panel-body">
+            <form
+              class="form-horizontal"
+              role="form"
+              method="post"
+              action="/admin"
+              enctype="multipart/form-data"
+            >
+              <div class="form-group">
+                <label for="type" class="col-md-3 control-label">Type</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="type"
+                    placeholder="Type"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name" class="col-md-3 control-label">Name</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    placeholder="Movie Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="year" class="col-md-3 control-label">Release Year</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="year"
+                    placeholder="Release Year"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="uploaded_image" class="col-md-3 control-label">Image</label>
+                <div class="col-sm-9">
+                  <input
+                    class="form-control"
+                    type="file"
+                    name="uploaded_image"
+                    accept=""
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lengthh" class="col-md-3 control-label">Length</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="lengthh"
+                    placeholder="User Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="director" class="col-md-3 control-label">Director</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="director"
+                    placeholder="Director"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="age" class="col-md-3 control-label">Age</label>
+                <div class="col-md-9">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="age"
+                    placeholder="Age"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subtype" class="col-md-3 control-label">Sub Type</label>
+                <div class="col-md-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subtype"
+                    placeholder="Sub Type"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <!-- Button -->
+                <div class="col-md-offset-3 col-md-9">
+                  <button id="btn-signup" type="submit" class="btn btn-info">
+                    <i class="fa fa-check"></i> Register
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

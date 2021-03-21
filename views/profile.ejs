@@ -1,0 +1,145 @@
+<%- include ("partials/header") %>
+<section id="profile">
+    <div class="showcase">
+        <div class="showcase-top">
+        </div>
+      </div>
+    <div class="delete_account">
+        <h1 class="login__title">Delete Account</h1>
+        <div class="errorEmail err">
+          Sorry, we can't find an account with this<strong> email address.</strong> 
+        </div>
+        <div class="errorPass err">
+          <strong>Incorrect password.</strong> Please try again with a different password.
+        </div>
+        <form class="deleteForm">
+          <div class="login__group">
+            <input
+              class="login__group__input"
+              type="text"
+              id="email"
+              name="email"
+              required="true"
+            /><label class="login__group__label">Email or phone number</label>
+          </div>
+          <div class="login__group log">
+            <input
+              class="login__group__input"
+              type="password"
+              id="password"
+              name="password"
+              required="true"
+            /><label class="login__group__label">Password</label
+            ><span
+              toggle="#password-field"
+              class="fa fa-fw fa-eye field-icon-2 toggle-password"
+            ></span>
+          </div>
+          <span id="error"></span>
+          <input type="submit" class="login__sign-in mt-4" value="Delete" />
+        </form>
+        <div class="login_bottom">
+          <a class="login_bottom_text" href="#">Need help?</a>
+        </div>
+        <div class="signup">
+          <p>Update profile? <a href="#" id="showUpdate">Click here.</a></p>
+        </div>
+      </div>
+      <!-- end of login  -->
+    
+      <!-- update profile  -->
+      <div class="update_profile">
+        <h1 class="login__title">Update Profile</h1>
+        <div class="errorEmail err">
+          Sorry, we can't find an account with this<strong> email address.</strong> <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="errorPass err">
+          <strong>Incorrect password.</strong> Please try again. <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="errorAcc err">
+          <strong>This email has already been registered.</strong> Please try again with a different email. <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="errorCred err">
+          <strong>Invalid credentials.</strong><i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="success">
+         <strong>Updated successfully.</strong> <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+        </div>
+        <form class="updateForm">
+          <div class="login__group">
+            <input
+              class="login__group__input"
+              type="text"
+              id="name"
+              name="name"
+              required="true"
+              placeholder="Name"
+            />
+            <input
+              class="login__group__input"
+              type="text"
+              id="newName"
+              name="newName"
+              required="true"
+              placeholder="New Name"
+            />
+          </div>
+          <div class="login__group">
+            <input
+              class="login__group__input"
+              type="text"
+              id="newEmail"
+              name="email"
+              required="true"
+              placeholder="Email or phone number"
+            />
+            <input
+              class="login__group__input"
+              type="text"
+              id="newEmail1"
+              name="newEmail"
+              required="true"
+              placeholder="New email or phone number"
+            />
+          </div>
+          <div class="login__group sign">
+            <input
+              class="login__group__input"
+              type="password"
+              id="newPassword"
+              name="password"
+              required="true"
+              placeholder="Password"
+            />
+            <span
+              toggle="#password-field"
+              class="fa fa-fw fa-eye field-icon-1 toggle-password"
+            ></span>
+            <input
+              class="login__group__input"
+              type="password"
+              id="newPassword1"
+              name="newPassword"
+              required="true"
+              placeholder="New password"
+            />
+            <span
+              toggle="#password-field"
+              class="fa fa-fw fa-eye field-icon toggle-password"
+            ></span>
+          </div>
+          <span id="error"></span>
+    
+          <input class="login__sign-up" type="submit" value="Update" />
+        </form>
+        <div class="login_bottom">
+          <a class="login_bottom_text" href="#">Need help?</a>
+        </div>
+        <div class="signup">
+          <p>Delete account? <a href="#" id="showDelete">Click here.</a></p>
+        </div>
+        
+      </div>
+</section>
+
+<%- include ("partials/footer") %> 

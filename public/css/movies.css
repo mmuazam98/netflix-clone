@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+#movies .container {
+  max-width: 90%;
+}
+#movies .category {
+  margin: 20px 0;
+}
+#movies .title {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+}
+#movies .playNow,#movies .moreInfo{
+  background: white !important;
+  padding: 7px 30px;
+  font-weight: 700;
+  font-size: 20px;
+}
+#movies .playNow i,#movies .moreInfo i{
+  padding-right: 9px;
+}
+#movies .moreInfo{
+  background: rgba(65, 65, 65, 0.55) !important;
+  padding-right: 7px 20px;
+  color: white;
+}
+#movies span.tempAge{
+  background-color: rgba(77, 77, 77, 0.6);
+  border-left: 3px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 5px 25px;
+}
+@media (max-width: 700px) {
+  #movies .playNow,#movies .moreInfo{
+    padding: 5px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  #movies .container {
+    max-width: 80%;
+  }
+  #movies .playNow,#movies .moreInfo{
+    padding: 5px 13px;
+    font-size: 16px;
+  }
+  #movies span.tempAge{
+    padding: 5px 18px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 380px) {
+  #movies .container {
+    max-width: 75%;
+  }
+  #movies .playNow,#movies .moreInfo{
+    padding: 5px 11px;
+    font-size: 15px;
+  }
+}

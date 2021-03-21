@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  background-color: #2f3242;
+  background: rgb(15, 15, 15);
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+.message-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+.message-box h1 {
+  font-size: 60px;
+  line-height: 46px;
+  /* margin-bottom: 40px;   */
+}
+.buttons-con .action-link-wrap {
+  margin-top: 10px;
+}
+.buttons-con .action-link-wrap a {
+  background: #e50914;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.buttons-con .action-link-wrap a:hover {
+  background: #5a5c6c;
+  color: #fff;
+}
+
+#Polygon-1,
+#Polygon-2,
+#Polygon-3,
+#Polygon-4,
+#Polygon-4,
+#Polygon-5 {
+  animation: float 1s infinite ease-in-out alternate;
+}
+#Polygon-2 {
+  animation-delay: 0.2s;
+}
+#Polygon-3 {
+  animation-delay: 0.4s;
+}
+#Polygon-4 {
+  animation-delay: 0.6s;
+}
+#Polygon-5 {
+  animation-delay: 0.8s;
+}
+
+@keyframes float {
+  100% {
+    transform: translateY(20px);
+  }
+}
