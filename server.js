@@ -89,7 +89,7 @@ app.get("/movies", (req, res) => {
   if (req.session.name) {
     con.query("SELECT * FROM `content` WHERE `Type`='movie'", function (error, results) {
       // console.log(results);
-      if (err) throw err;
+      if (error) throw error;
 
       res.render("movies", { page: "movies", result: results });
     });
@@ -100,8 +100,6 @@ app.get("/shows", (req, res) => {
   if (req.session.name) {
     con.query("SELECT * FROM `content` WHERE `Type`='show'", function (error, results) {
       // console.log(results);
-      if (err) throw err;
-
       if (error) console.log(error);
       res.render("shows", { page: "shows", result: results });
     });
